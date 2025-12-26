@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "projectName": "AmanaMart E-Commerce",
+  "description": "Professional Full-Stack E-Commerce Platform",
+  "lastUpdated": "2025-12-26T12:01:43+06:00",
+  "changelog": {
+    "1.0.0": {
+      "date": "2025-12-26",
+      "changes": [
+        "Initial project setup",
+        "Spring Boot backend with Java 21",
+        "React + Vite frontend with Tailwind CSS",
+        "Docker containerization (PostgreSQL, Redis, Backend, Frontend)",
+        "Complete documentation in Bengali",
+        "Git integration and GitHub automation"
+      ]
+    }
+  },
+  "authors": [
+    {
+      "name": "Mahmudul Hassan",
+      "github": "mahmudulhassan-dev",
+      "role": "Full-Stack Developer"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahmudulhassan-dev/amanamart-ecommerce.git"
+  },
+  "versioningStrategy": "Semantic Versioning (MAJOR.MINOR.PATCH)",
+  "autoIncrement": "patch"
+}

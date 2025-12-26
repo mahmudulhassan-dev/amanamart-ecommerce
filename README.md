@@ -63,17 +63,24 @@
 
 ---
 
-## 📦 গিটহাবে আপলোড গাইড (GitHub Upload Guide)
+## 📦 GitHub Repository
 
-১. গিটহাবে একটি **Private Repository** তৈরি করুন।
-২. টার্মিনালে কমান্ড দিন:
+### 🌐 Live Repository:
+**Repository URL**: [https://github.com/mahmudulhassan-dev/amanamart-ecommerce](https://github.com/mahmudulhassan-dev/amanamart-ecommerce)
+
+### 📥 Clone করতে চাইলে:
 ```bash
-git init
-git add .
-git commit -m "Initial Professional Commit v1.0.0"
-git branch -M main
-git remote add origin <YOUR_GITHUB_REPO_URL>
-git push -u origin main
+git clone https://github.com/mahmudulhassan-dev/amanamart-ecommerce.git
+cd amanamart-ecommerce
+docker-compose up -d
 ```
+
+### 🔄 পরবর্তী Push (পরিবর্তনের পর):
+```bash
+git add .
+git commit -m "Your commit message here"
+git push origin main
+```
+
 ---
 *Developed with ❤️ by Antigravity*
