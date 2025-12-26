@@ -1,0 +1,36 @@
+# Java / Spring Boot
+target/
+*.class
+*.jar
+*.war
+
+# Maven
+.mvn/wrapper/maven-wrapper.properties
+.mvn/
+mvnw
+mvnw.cmd
+
+# Node.js / React
+node_modules/
+dist/
+build/
+coverage/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# OS System Files
+Thumbs.db
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Docker
+docker-compose.override.yml
+
+# Secrets (VERY IMPORTANT)
+.env

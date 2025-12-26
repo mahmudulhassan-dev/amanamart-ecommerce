@@ -1,0 +1,86 @@
+services:
+  # 1. Database Service (PostgreSQL) - "Most Powerful"
+  postgresdb:
+    image: postgres:16-alpine
+    container_name: amana_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: amanamart
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - amana-network
+    restart: always
+
+  # 2. Caching Service (Redis)
+  redis:
+    image: redis:alpine
+    container_name: amana_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - amana-network
+    restart: always
+
+  # 3. Database UI (pgAdmin) - Replaces phpMyAdmin
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: amana_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@amana.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "8081:80"
+    depends_on:
+      - postgresdb
+    networks:
+      - amana-network
+
+  # 4. Backend Service (Java Spring Boot)
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: amana_backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresdb
+      - redis
+    environment:
+      # Database Config
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresdb:5432/amanamart
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: root
+      # Redis Config
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
+    networks:
+      - amana-network
+
+  # 5. Frontend Service (React)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: amana_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://backend:8080
+    volumes:
+      - ./frontend/src:/app/src
+    networks:
+      - amana-network
+
+volumes:
+  postgres_data:
+
+networks:
+  amana-network:
+    driver: bridge

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AmanaMart | Fashion & Clothing</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Promo Bar -->
+    <div class="top-bar">
+        FREE SHIPPING ON ORDERS OVER $99 | FREE RETURNS
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="logo">
+            <!-- Tries to load generated logo, falls back to text -->
+            <img th:src="@{/images/amanamart_logo.png}" alt="AmanaMart" onerror="this.onerror=null; this.src='https://placehold.co/150x50/000000/FFFFFF?text=AmanaMart';">
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search for items, brands and inspiration...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="user-actions">
+            <i class="far fa-user"></i>
+            <i class="far fa-heart"></i>
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-categories">
+        <ul>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Curve + Plus</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Electronics</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <img th:src="@{/images/hero_banner.png}" alt="Sale Banner" onerror="this.style.display='none'">
+        <!-- Fallback Content if image fails -->
+        <div class="hero-content">
+            <h1>End-Of-Year<br>CLEARANCE</h1>
+            <p>Up to 80% OFF</p>
+            <button class="btn-primary">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Flash Sale / Products -->
+    <h2 class="section-title">Daily Drops</h2>
+
+    <div class="product-container">
+        <!-- Iterate over products from Java Controller -->
+        <div class="product-card" th:each="product : ${products}">
+            <div class="product-image">
+                <div class="discount-tag" th:text="${'-' + product.discount + '%'}">-20%</div>
+                <!-- Image with fallback -->
+                <img th:src="@{${product.imageUrl}}" th:alt="${product.name}" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/300x400/f5f5f5/cccccc?text=Product';">
+                <button class="add-to-cart-btn"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="product-info">
+                <div class="product-title" th:text="${product.name}">Product Name</div>
+                <div class="price-box">
+                    <span class="current-price" th:text="${'$' + product.price}">$10.00</span>
+                    <span class="original-price" th:text="${'$' + product.originalPrice}">$20.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

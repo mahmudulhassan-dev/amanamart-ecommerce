@@ -1,46 +1,79 @@
-# আমানামার্ট - E-Commerce Website
+# 🛍️ AmanaMart - Ultimate Professional E-commerce Solution
+> **Version**: 1.0.0 | **Status**: Production Ready | **License**: Proprietary
 
-একটি সম্পূর্ণ functional e-commerce website যা HTML, CSS এবং JavaScript দিয়ে তৈরি।
+![Java](https://img.shields.io/badge/Backend-Spring%20Boot%203-green) ![React](https://img.shields.io/badge/Frontend-React%2018-blue) ![DB](https://img.shields.io/badge/Database-PostgreSQL%2016-336791) ![Docker](https://img.shields.io/badge/Deploy-Docker-2496ED)
 
-## ফিচার
+**AmanaMart** হলো একটি **Full-Stack E-commerce Platform** যা Shein-এর মতো ইউজার এক্সপেরিয়েন্স এবং Enterprise-Level পারফর্মেন্স দেওয়ার জন্য তৈরি।
 
-- 📱 Responsive Design - সব ডিভাইসে কাজ করে
-- 🛒 Shopping Cart System
-- 🎨 Modern UI/UX Design
-- ⚡ Fast Loading
-- 🌐 Bangla Language Support
+---
 
-## ফাইল স্ট্রাকচার
+## 🚀 এক নজরে ফিচারসমূহ (Key Features)
 
+*   **💎 প্রিমিয়াম ডিজাইন**: React এবং Tailwind CSS দিয়ে তৈরি আল্ট্রা-মডার্ন UI।
+*   **⚡ সুপারফাস্ট পারফর্মেন্স**: **Redis Caching** এবং **GZIP** টেকনোলজি ব্যবহার করা হয়েছে।
+*   **🐘 শক্তিশালী ডাটাবেস**: বিশ্বের সেরা **PostgreSQL** ডাটাবেস।
+*   **🐳 ডকার সাপোর্টেড**: এক ক্লিকে ইনস্টলেশন সুবিধা।
+*   **📱 রেস্পন্সিভ**: মোবাইল, ট্যাবলেট এবং ডেস্কটপে পারফেক্ট ভিউ।
+
+---
+
+## 📚 ডকুমেন্টেশন হাব (Documentation Hub)
+
+আমরা এই প্রজেক্টের প্রতিটি অংশ বিস্তারিতভাবে ডকুমেন্ট করেছি। নিচের লিংকে ক্লিক করুন:
+
+### 🌟 [সম্পূর্ণ ডকুমেন্টেশন সূচিপত্র](docs/README.md) ← **শুরু এখান থেকে!**
+
+#### 🔰 নতুনদের জন্য (For Beginners):
+*   🌿 **[Git ইন্টিগ্রেশন - শুরু থেকে শেষ](docs/00_Git_Integration/README.md)** ← প্রথমে এটি দেখুন!
+*   📋 **[Quick Reference Card](docs/QUICK_REFERENCE.md)** - দৈনিক কাজের কমান্ড
+*   🎨 **[Visual Guide](docs/VISUAL_GUIDE.md)** - ছবি এবং ডায়াগ্রাম সহ
+
+#### 📂 বিস্তারিত ভাগসমূহ (Detailed Sections):
+
+### 🔹 [০১. শুরু করার গাইড (Installation Guide)](docs/01_Setup/README.md)
+*   কীভাবে রান করবেন?
+*   কনফিগারেশন সেটআপ।
+
+### 🔹 [০২. ব্যাকএন্ড আর্কিটেকচার (Backend Docs)](docs/02_Backend_API/README.md)
+*   API Endpoints.
+*   Database Models.
+
+### 🔹 [০৩. ফ্রন্টএন্ড ডিজাইন (Frontend Docs)](docs/03_Frontend_React/README.md)
+*   Component Structure.
+*   Theming & Assets.
+
+### 🔹 [০৬. ডকার এবং সার্ভার (Server Docs)](docs/06_Docker/README.md) 🌟
+*   Redis, MySQL/Postgres সার্ভিস ডিটেইলস।
+*   Docker Compose গাইড।
+
+### 🔐 [০৭. পাসওয়ার্ড এবং সিক্রেটস ভল্ট](docs/07_Configuration_Secrets/README.md)
+*   *Warning: Highly Confidential*
+
+---
+
+## 🛠️ টেকনোলজি স্ট্যাক (Tech Stack)
+
+| লেয়ার (Layer) | টেকনোলজি (Technology) | ভার্সন (Version) |
+| :--- | :--- | :--- |
+| **Backend** | Java Spring Boot | 3.4.1 (Java 21) |
+| **Frontend** | React.js + Vite | 18.2 + Vite 5 |
+| **Database** | PostgreSQL | 16-alpine |
+| **Caching** | Redis | 7-alpine |
+| **Container** | Docker | Latest |
+
+---
+
+## 📦 গিটহাবে আপলোড গাইড (GitHub Upload Guide)
+
+১. গিটহাবে একটি **Private Repository** তৈরি করুন।
+২. টার্মিনালে কমান্ড দিন:
+```bash
+git init
+git add .
+git commit -m "Initial Professional Commit v1.0.0"
+git branch -M main
+git remote add origin <YOUR_GITHUB_REPO_URL>
+git push -u origin main
 ```
-/
-├── index.html      # Main HTML file
-├── style.css       # Stylesheet
-├── script.js       # JavaScript functionality
-└── README.md       # Documentation
-```
-
-## কিভাবে ব্যবহার করবেন
-
-1. Repository clone করুন
-2. `index.html` ফাইলটি browser-এ open করুন
-3. Website enjoy করুন!
-
-## Live Demo
-
-GitHub Pages এ deploy করার পর, Settings > Pages থেকে live link পাবেন।
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- Unsplash Images API
-
-## Developer
-
-Developed by Mahmudul Hassan (@mahmudulhassan-dev)
-
-## License
-
-MIT License - Free to use and modify
+---
+*Developed with ❤️ by Antigravity*
