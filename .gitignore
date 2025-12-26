@@ -34,3 +34,18 @@ docker-compose.override.yml
 
 # Secrets (VERY IMPORTANT)
 .env
+.env.local
+.env.production
+backend/.env
+frontend/.env
+
+# Uploads
+uploads/
+data/
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
