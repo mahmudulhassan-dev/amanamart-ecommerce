@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমানামার্ট - অনলাইন ই-কমার্স</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">🛒 আমানামার্ট</div>
+                <ul class="nav-menu">
+                    <li><a href="#home">হোম</a></li>
+                    <li><a href="#products">পণ্য</a></li>
+                    <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                    <li><a href="#contact">যোগাযোগ</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <span id="cart-count">0</span>
+                    🛍️ কার্ট
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>আমানামার্টে স্বাগতম</h1>
+            <p>সেরা মানের পণ্য, সেরা দামে</p>
+            <button class="btn-primary" onclick="scrollToProducts()">এখনই কিনুন</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2>আমাদের পণ্য</h2>
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>আমাদের সম্পর্কে</h2>
+            <p>আমানামার্ট বাংলাদেশের একটি বিশ্বস্ত অনলাইন শপিং প্ল্যাটফর্ম। আমরা সেরা মানের পণ্য সরবরাহ করি।</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>যোগাযোগ করুন</h2>
+            <p>📧 Email: info@amanamart.com</p>
+            <p>📱 Phone: +880 1700-000000</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 আমানামার্ট। সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
