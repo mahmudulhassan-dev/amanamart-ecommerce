@@ -1,15 +1,37 @@
-# Frontend Dockerfile
-FROM node:20-alpine
+# Multi-stage build for React
 
+# Stage 1: Build
+FROM node:20-alpine AS build
 WORKDIR /app
 
+# Copy package files
 COPY package*.json ./
-RUN npm install
+RUN npm ci --silent
 
+# Copy source code
 COPY . .
 
-# Expose Vite Port
-EXPOSE 5173
+# Build for production
+RUN npm run build
 
-# Run with host flag to allow Docker access
-CMD ["npm", "run", "dev", "--", "--host"]
+# Stage 2: Serve with nginx
+FROM nginx:alpine
+WORKDIR /usr/share/nginx/html
+
+# Remove default nginx static assets
+RUN rm -rf ./*
+
+# Copy built files from build stage
+COPY --from=build /app/dist .
+
+# Copy nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port
+EXPOSE 80
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s CMD wget --quiet --tries=1 --spider http://localhost || exit 1
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
