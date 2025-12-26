@@ -1,7 +1,7 @@
 # 🛍️ AmanaMart - Ultimate Professional E-commerce Solution
 > **Version**: 1.0.0 | **Status**: Production Ready | **License**: Proprietary
 
-![Java](https://img.shields.io/badge/Backend-Spring%20Boot%203-green) ![React](https://img.shields.io/badge/Frontend-React%2018-blue) ![DB](https://img.shields.io/badge/Database-PostgreSQL%2016-336791) ![Docker](https://img.shields.io/badge/Deploy-Docker-2496ED)
+![Java](https://img.shields.io/badge/Backend-Spring%20Boot%203-green) ![React](https://img.shields.io/badge/Frontend-React%2018-blue) ![DB](https://img.shields.io/badge/Database-PostgreSQL%2016-336791) ![Docker](https://img.shields.io/badge/Deploy-Docker-2496ED) ![GitHub](https://img.shields.io/badge/GitHub-mahmudulhassan--dev-181717?logo=github) ![Automation](https://img.shields.io/badge/Automation-Active-brightgreen)
 
 **AmanaMart** হলো একটি **Full-Stack E-commerce Platform** যা Shein-এর মতো ইউজার এক্সপেরিয়েন্স এবং Enterprise-Level পারফর্মেন্স দেওয়ার জন্য তৈরি।
 
